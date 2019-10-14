@@ -1,0 +1,52 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 5% 45% 15% 15% 20%;
+    grid-gap: 2px;
+    background-color: rgb(200, 200, 200);
+    padding: 1px;
+  }
+
+.grid-container:hover {
+    background-color: rgb(180, 180, 180);
+  }
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+
+.grid-container-header{
+    background-color: rgb(100, 100, 100);
+}
+
+.grid-container-header:hover{
+    background-color: rgb(100, 100, 100);
+}
+
+.item-position {    
+    margin: 1px;
+    border-radius: 5px;
+    min-height: 30px;
+    vertical-align: middle;
+}
+.item-position img{
+    width:24px;
+    height:24px;
+    float: left;
+    margin: 1px;
+    line-height: 35px;
+}
+
+.pokemon-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 0px;
+    padding: 1px;
+}
+
+.pokemon-icon{
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
