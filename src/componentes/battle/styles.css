@@ -1,22 +1,24 @@
 .battle{
-    background-color: rgb(80, 80, 80);
-    border: solid 1px rgb(115, 115, 115);
-    color: rgb(250,250,250);
-    border-radius: 8px;
+    background-color: rgb(240, 240, 240);    
+    border: solid 1px rgb(200, 200, 200);    
+    border-radius: 5px;
     padding: 5px;
-    min-width: 400px;
-    margin: 1px;
+    min-width: 200px;
+    margin: 2px;
 }
 
 .battle:hover{
-    background-color: rgb(90, 90, 90);
+    background-color: rgb(220, 220, 220);
 }
 
 .battle-title{
     background-color: rgba(0, 0, 0, 0.1);
-    border-bottom: solid 3px rgb(150, 150, 150);
+    color: #3f51b5;
+    border-bottom: solid 2px rgb(150, 150, 150);
     margin: 2px 2px 2px 2px;    
     border-radius: 5px 5px 0px 0px;
+    padding: 2px;
+    text-align: center;
 }
 
 .title{
@@ -28,8 +30,7 @@
 }
 
 .battle-result{    
-    border: solid 2px rgba(0, 0, 0, 0.1);
-    border-top: none;
+    
     margin: 2px 2px 2px 2px;
     border-radius: 0px 0px 5px 5px;
     padding: 2px;
@@ -37,9 +38,9 @@
 
 .battle-stats{
     display: inline-block;
-    border: solid 1px rgb(110, 110, 110);
+    border: solid 1px rgb(210, 210, 210);
     min-height: 94px;
-    width: 56%;
+    width: 50%;
     border-radius: 5px;
     padding: 3px;
 }
@@ -53,7 +54,7 @@
 }
 
 .podium-item {    
-    border: solid 1px rgb(115, 115, 115);;
+    border: solid 1px rgb(210, 210, 210);
     margin: 1px;
     border-radius: 5px;
     min-height: 30px;
@@ -72,13 +73,13 @@
 }
 
 .gold{
-    background-color: rgba(255, 215, 0, 0.15);
+    background-color: rgba(255, 215, 0, 0.25);
 }
 
 .silver{
-    background-color: rgba(192, 192, 192, 0.15);
+    background-color: rgba(192, 192, 192, 0.25);
 }
 
 .bronze{
-    background-color: rgba(176, 141, 87, 0.15);
+    background-color: rgba(176, 141, 87, 0.25);
 }

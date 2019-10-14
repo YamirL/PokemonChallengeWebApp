@@ -4,7 +4,7 @@ import './styles.css';
 const Header = () => {
     return(
         <div className="grid-container grid-container-header">
-            <div>Rnk</div>
+            <div>#</div>
             <div>Pokemon</div>
             <div>Battles</div>
             <div>Default Ranking</div>

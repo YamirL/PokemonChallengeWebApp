@@ -1,4 +1,5 @@
-import React from 'react';import Paper from '@material-ui/core/Paper';
+import React from 'react';
+
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -7,6 +8,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Ranking from './componentes/ranking';
 import BattleContainer from './componentes/BattleContainer';
 import './App.css';
+import Pokemon from './componentes/battle/pokemon';
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
           <Col xs={12}>
             <AppBar position='sticky'>
               <Toolbar color="black">
-                <IconButton color="white">
+                <IconButton color="inherit">
                   &#8801;
                 </IconButton>
                 <Typography variant='h6' color='inherit'>Pokemon Arena</Typography>
@@ -24,13 +26,14 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={4}>
             <BattleContainer></BattleContainer>
           </Col>
-          <Col xs={12} md={6}>
-            
-              <Ranking></Ranking>
-            
+          <Col xs={4} md={4}>
+              <Ranking></Ranking>            
+          </Col>
+          <Col xs={4} md={4}>
+              <Pokemon></Pokemon>           
           </Col>
         </Row>
       </Grid>

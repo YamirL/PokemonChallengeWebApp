@@ -22,14 +22,14 @@ const getPositions = (pos) => {
         </div>
     );
 }
-const Item = ({rnk, positions}) => {
+const Item = ({data}) => {
     return(
         <div className="grid-container">
-            <div>{rnk}</div>
-            <div><Pokemon id={1} name={"Pikachu"} url={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png"}></Pokemon></div>
-            <div>4</div>
-            <div>3</div>
-            <div>{getPositions(positions)}</div>
+            <div>{data.ranking}</div>
+            <div><Pokemon id={data.id} name={data.name} url={data.url}></Pokemon></div>
+            <div>{data.battles}</div>
+            <div>{data.defaultRanking}</div>
+            <div>{getPositions(data.ranking - data.defaultRanking)}</div>
         </div>
     );
 }

@@ -4,6 +4,7 @@ import './styles.css'
 const Pokemon = ({id, name, url, types}) => {
     return(
         <div className="pokemon-container">
+            
             <div className="pokemon-icon">
                 <img src={url} alt=""></img>
             </div>

@@ -4,13 +4,13 @@ import Podium from './Podium';
 import './styles.css';
 import Statistics from './Statistics';
 
-const Battle = ({id, description, date, battles, fighters, first, second, third}) => {
+const Battle = ({battle, handleClick}) => {
     return(
-        <div className="battle">
-            <BattleTitle description={description} date={date}></BattleTitle>
+        <div className="battle" onClick={handleClick(battle.id)}>
+            <BattleTitle description={battle.description} date={battle.date}></BattleTitle>
             <div className="battle-result">
-                <Statistics battles={battles} fighters={fighters}></Statistics>
-                <Podium first={first} second={second} third={third}></Podium>
+                <Statistics battles={battle.battles} fighters={battle.fighters}></Statistics>
+                <Podium first={battle.first} second={battle.second} third={battle.third}></Podium>
             </div>
         </div>
     );
