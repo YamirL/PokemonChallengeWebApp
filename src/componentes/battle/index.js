@@ -4,9 +4,9 @@ import Podium from './Podium';
 import './styles.css';
 import Statistics from './Statistics';
 
-const Battle = ({battle, handleClick}) => {
-    return(
-        <div className="battle" onClick={handleClick(battle.id)}>
+const Battle = ({ battle, onBattleClick }) => {
+    return (
+        <div className="battle" onClick={onBattleClick}>
             <BattleTitle description={battle.description} date={battle.date}></BattleTitle>
             <div className="battle-result">
                 <Statistics battles={battle.battles} fighters={battle.fighters}></Statistics>
