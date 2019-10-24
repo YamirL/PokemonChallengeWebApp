@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import Pokemon from './Pokemon';
+import PokemonIcon from './PokemonIcon';
 
 const ICONS_PATH = "./resources/icons";
 
@@ -26,7 +26,7 @@ const Item = ({ data, onItemClick }) => {
     return (
         <div className="grid-container" onClick={onItemClick}>
             <div>{data.newRanking + 1}</div>
-            <div><Pokemon id={data.pokemon.id} name={data.pokemon.name} url={data.pokemon.sprites.front_default}></Pokemon></div>
+            <div><PokemonIcon id={data.pokemon.id} name={data.pokemon.name} url={data.pokemon.sprites.front_default}></PokemonIcon></div>
             <div>{data.battles}</div>
             <div>{data.defaultRanking + 1}</div>
             <div>{getPositions(data.defaultRanking - data.newRanking)}</div>

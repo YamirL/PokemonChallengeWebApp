@@ -1,11 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import Item from './Item';
-
 const Ranking = ({ ranking, onSelectedItem }) => {
     const handleSelectedItem = (pokemon) => {
-        console.log("Test click");
-        console.log(pokemon);
         onSelectedItem(pokemon);
     }
 
@@ -15,9 +12,15 @@ const Ranking = ({ ranking, onSelectedItem }) => {
         ));
     }
     return (
-        <div>
-            {ranking ? <Header></Header> : null}
-            {ranking ? getItems() : <h1>Select a Battle</h1>}
+
+        <div className="ranking-layout">
+            <div className="header-title">Overall Standings</div>
+            <div className="ranking-container">
+                {ranking ? <Header></Header> : null}
+                <div >
+                    {ranking ? getItems() : <div className="header-title">Select a Battle</div>}
+                </div>
+            </div>
         </div>
     );
 }

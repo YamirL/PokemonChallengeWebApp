@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css'
+import * as util from '../../services/util'
 
 const Pokemon = ({ id, name, url, types }) => {
 
@@ -9,8 +10,12 @@ const Pokemon = ({ id, name, url, types }) => {
             <div className="pokemon-icon">
                 {<img src={url} alt=""></img>}
             </div>
-            <div>{name}</div>
-            <div>{`#${('000' + id).slice(-3)}`}</div>
+            <div className="pokemon-attribs">
+                <span>
+                    {util.capitalize(name)}<br></br>
+                    {`#${('000' + id).slice(-3)}`}
+                </span>
+            </div>
         </div>
     );
 }

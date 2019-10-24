@@ -1,0 +1,112 @@
+.battle{
+    background-color: rgb(240, 240, 240);    
+    border: solid 1px rgb(200, 200, 200);    
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 200px;
+    margin: 10px;
+
+    background: rgb(250,250,250);
+    background: radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 75%, rgba(220,220,220,1) 100%);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 128, 250, 0.1);
+}
+
+.battle:hover{
+    background: rgb(250,250,250);
+    background: radial-gradient(circle, rgba(220,220,220,1) 0%, rgba(220,220,220,1) 75%, rgba(200,200,200,1) 100%);
+}
+
+.battle-title{
+    background-color: rgba(150, 150, 150, 0.1);
+    color: rgb(0, 122, 204);
+    border-bottom: solid 2px rgb(150, 150, 150);
+    margin: 0px;    
+    border-radius: 5px 5px 0px 0px;
+    padding:2px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.title{
+    font-size: 120%;
+}
+
+.sub-title{
+    font-size: 110%;
+}
+
+.battle-result{    
+    
+    margin: 2px 2px 2px 2px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 2px;
+}
+
+.battle-stats{
+    display: inline-block;
+    border: solid 1px rgb(210, 210, 210);
+    min-height: 100px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial,sans-serif;
+    color: rgb(30,30,20);
+    font-size: 16px;
+}
+.battle-stats b{
+    color: rgb(80,80,80);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+}
+
+.battle-podium{
+    margin: 0px 3px;
+    padding: 1px;
+    width: 40%;
+    min-height: 100px;
+    float: left;
+}
+
+.podium-item {    
+    border: solid 1px rgb(210, 210, 210);
+    margin: 3px;
+    border-radius: 5px;
+    min-height: 30px;
+    vertical-align: middle;
+    height: 30px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.podium-item span{
+    line-height: 30px; 
+    vertical-align: middle;
+    font-size: 14px;
+}
+.podium-item img{
+    width:20px;
+    height:20px;
+    float: left;
+    margin: 3px 1px 1px 2px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.podium span{
+    float: left;
+}
+
+.gold{
+    background-color: rgba(255, 215, 0, 0.25);
+}
+
+.silver{
+    background-color: rgba(192, 192, 192, 0.25);
+}
+
+.bronze{
+    background-color: rgba(176, 141, 87, 0.25);
+}

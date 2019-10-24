@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-
+/* Third Party */
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import { IconButton } from '@material-ui/core';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import axios from 'axios';
+/* Own Components*/
 import Ranking from './componentes/ranking';
 import BattleList from './componentes/BattleList';
-import './App.css';
-import Pokemon from './componentes/battle/pokemon';
+import Pokemon from './componentes/pokemon';
 import { API_BATTLES } from './constants/constants';
-import axios from 'axios';
+
+import './App.css';
+
 
 class App extends Component {
   constructor() {
@@ -25,14 +28,10 @@ class App extends Component {
   handleSelectedBattle = (battle) => {
     const { ranking } = battle;
     this.setState({ ranking });
-
-    console.log(ranking);
   }
 
   handleSelectedItem = (pokemon) => {
     this.setState({ pokemon });
-
-    console.log(pokemon);
   }
 
   componentDidMount() {
@@ -40,7 +39,6 @@ class App extends Component {
       method: 'get',
       url: API_BATTLES,
       headers: {
-        'Access-Control-Allow-Origin': '*',
         Accept: 'application/json',
         'Content-Type': 'application/json',
       }
@@ -57,21 +55,22 @@ class App extends Component {
       });
   }
 
+
+
+
+
   render() {
+
     return (
-      <Grid>
-        <Row>
-          <Col xs={12}>
-            <AppBar position='sticky'>
-              <Toolbar color="black">
-                <IconButton color="inherit">
-                  &#8801;
+      <Grid spacing={3}>
+        <AppBar position="static">
+          <Toolbar color="black">
+            <IconButton color="inherit">
+              &#8801;
                 </IconButton>
-                <Typography variant='h6' color='inherit'>Pokemon Arena</Typography>
-              </Toolbar>
-            </AppBar>
-          </Col>
-        </Row>
+            <Typography variant='h6' color='inherit'>Pokemon Arena</Typography>
+          </Toolbar>
+        </AppBar>
         <Row>
           <Col xs={12} md={4}>
             <BattleList battles={this.state.battles} onSelectedBattle={this.handleSelectedBattle}></BattleList>
@@ -84,9 +83,11 @@ class App extends Component {
           </Col>
         </Row>
       </Grid>
-
     );
   }
 }
 
 export default App;
+
+/*
+{/**/
